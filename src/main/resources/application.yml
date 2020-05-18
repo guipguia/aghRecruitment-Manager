@@ -1,0 +1,30 @@
+application:
+  name: AGH
+  displayName: AGH-Recruitment-Manager
+
+spring:
+  profiles: default
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+
+    url: jdbc:postgresql://${DB_HOST}:5432/${DB_SCHEMA}
+    username: ${DB_USER}
+    password: ${DB_PWD}
+
+    jpa:
+      database: default
+      generate-ddl: true
+      ddl-auto: create
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+flyway:
+  url: jdbc:postgresql://${DB_HOST}:5432/postgresql
+  schemas: ${DB_SCHEMA}
+  user: ${DB_USER}
+  password: ${DB_PWD}
