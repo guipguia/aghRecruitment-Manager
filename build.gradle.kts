@@ -24,6 +24,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("net.dv8tion:JDA:4.1.1_108")
 	implementation("com.beust:klaxon:5.0.1")
+	implementation("org.slf4j:slf4j-api:1.7.25")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {

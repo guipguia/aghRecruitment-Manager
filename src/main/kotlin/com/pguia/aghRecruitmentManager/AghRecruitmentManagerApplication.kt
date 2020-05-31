@@ -1,5 +1,6 @@
 package com.pguia.aghRecruitmentManager
 
+import com.pguia.aghRecruitmentManager.controller.AghRMController
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -7,6 +8,7 @@ import org.springframework.boot.runApplication
 class AghRecruitmentManagerApplication
 
 fun main(args: Array<String>) {
-	runApplication<AghRecruitmentManagerApplication>(*args)
-	println("Working :)")
+	val ctx = runApplication<AghRecruitmentManagerApplication>(*args)
+	val aghBean = ctx.getBean(AghRMController::class.java)
+	aghBean.start()
 }
